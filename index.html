@@ -1,336 +1,338 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Diego Yamil Leonel Romero | Portfolio IT</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Diego Yamil Leonel Romero | Portfolio IT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-   /* Importación de fuente moderna */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap");
 
-:root {
-    --primary: #0f172a;    /* Azul medianoche profundo */
-    --secondary: #334155;  /* Gris azulado */
-    --accent: #2563eb;     /* Azul profesional */
-    --bg: #f8fafc;         /* Blanco roto/grisáceo */
-    --text: #1e293b;
-    --card-bg: #ffffff;
-    --border: #e2e8f0;
-}
+      :root {
+        --bg-body: #0a0c10;
+        --bg-card: #161b22;
+        --accent: #58a6ff; /* Azul estilo GitHub */
+        --text-main: #e6edf3;
+        --text-dim: #8b949e;
+        --border: #30363d;
+      }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    padding: 40px 20px;
-}
+      body {
+        font-family: "Outfit", sans-serif;
+        background-color: var(--bg-body);
+        color: var(--text-main);
+        line-height: 1.6;
+      }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: var(--card-bg);
-    padding: 60px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
+      /* Layout Principal */
+      .container {
+        display: grid;
+        grid-template-columns: 320px 1fr; /* Columna fija para perfil */
+        min-height: 100vh;
+      }
 
-/* Encabezado */
-header {
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 30px;
-    margin-bottom: 40px;
-}
+      /* Barra Lateral (Header) */
+      header {
+        background-color: var(--bg-card);
+        padding: 60px 40px;
+        border-right: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-h1 {
-    font-size: 2.5rem;
-    color: var(--primary);
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    margin-bottom: 5px;
-}
-
-h2 {
-    font-size: 1.25rem;
-    color: var(--accent);
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.contacto {
-    font-size: 0.9rem;
-    color: var(--secondary);
-}
-
-.contacto a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.contacto a:hover {
-    text-decoration: underline;
-}
-
-/* Secciones */
-section {
-    margin-bottom: 50px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    color: var(--primary);
-    border-left: 4px solid var(--accent);
-    padding-left: 15px;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-p {
-    margin-bottom: 15px;
-    color: var(--secondary);
-}
-
-ul {
-    list-style-position: inside;
-    margin-bottom: 15px;
-    color: var(--secondary);
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* Grid de Tecnologías */
-.tecnologias-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.card {
-    background: var(--bg);
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-}
-
-.card strong {
-    display: block;
-    color: var(--primary);
-    margin-bottom: 5px;
-    font-size: 0.95rem;
-}
-
-.card p {
-    font-size: 0.85rem;
-    margin-bottom: 0;
-}
-
-/* Estilo específico para Proyectos */
-.proyecto {
-    border: 1px solid var(--border);
-    background: #fff;
-    padding: 30px;
-}
-
-.proyecto h4 {
-    font-size: 1.25rem;
-    color: var(--primary);
-    margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #94a3b8;
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    .container {
-        padding: 30px 20px;
-    }
-    
-    h1 {
+      header h1 {
         font-size: 1.8rem;
-    }
-}
-  </style>
-</head>
+        line-height: 1.1;
+        margin-bottom: 15px;
+        background: linear-gradient(90deg, #fff, var(--accent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-<body>
-  <div class="container">
+      header h2 {
+        font-size: 1rem;
+        color: var(--text-dim);
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
 
-    <header>
-      <h1>Diego Yamil Leonel Romero</h1>
-      <h2>Analista de Sistemas | Soporte IT | Backend PHP</h2>
+      .contacto {
+        font-size: 0.85rem;
+        color: var(--text-dim);
+      }
 
-      <div class="contacto">
-         Santa Fe, Argentina<br>
-         profyamilromero@gmail.com<br>
-         <a href="https://www.linkedin.com/in/diego-yamil-leonel-romero" target="_blank">
-          LinkedIn
-        </a>
-      </div>
-    </header>
+      .contacto a {
+        color: var(--accent);
+        text-decoration: none;
+        display: block;
+        margin-top: 10px;
+      }
 
-    <section>
-      <h3>Perfil</h3>
-      <p>
-        Analista de Sistemas con experiencia en soporte IT, mantenimiento de sistemas,
-        desarrollo backend en PHP y diseño de bases de datos relacionales.
-      </p>
-      <p>
-        Orientado a la <strong>resolución de problemas</strong>, análisis de procesos
-        y desarrollo de soluciones técnicas aplicadas a negocios.
-      </p>
-      <p>
-        Interés en roles técnicos vinculados a:
-      </p>
-      <ul>
-        <li>Soporte IT / Infraestructura</li>
-        <li>Desarrollo Backend PHP</li>
-        <li>Bases de Datos</li>
-        <li>Análisis y mejora de sistemas</li>
-      </ul>
-    </section>
+      /* Área de Contenido (Main) */
+      main {
+        padding: 60px 80px;
+        max-width: 1000px;
+      }
 
-    <section>
-      <h3>Tecnologías y Conocimientos</h3>
+      section {
+        margin-bottom: 60px;
+      }
 
-      <div class="tecnologias-grid">
-        <div class="card">
-          <strong>Lenguajes</strong>
-          <p>PHP, SQL</p>
-        </div>
+      h3 {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent);
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+      }
 
-        <div class="card">
-          <strong>Frameworks</strong>
-          <p>Laravel</p>
-        </div>
+      h3::after {
+        content: "";
+        height: 1px;
+        background: var(--border);
+        flex-grow: 1;
+        margin-left: 20px;
+      }
 
-        <div class="card">
-          <strong>Backend</strong>
-          <p>PHP 8, Arquitectura MVC, APIs REST</p>
-        </div>
+      /* Grid de Tecnologías */
+      .tecnologias-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 12px;
+      }
 
-        <div class="card">
-          <strong>Bases de Datos</strong>
-          <p>MySQL / MariaDB</p>
-        </div>
+      .card {
+        background: #0d1117;
+        border: 1px solid var(--border);
+        padding: 15px;
+        border-radius: 6px;
+      }
 
-        <div class="card">
-          <strong>DevOps</strong>
-          <p>Docker, Docker Compose</p>
-        </div>
+      .card strong {
+        color: var(--accent);
+        font-size: 0.9rem;
+      }
 
-        <div class="card">
-          <strong>Sistemas Operativos</strong>
-          <p>Windows</p>
-        </div>
+      .card p {
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        margin-top: 5px;
+      }
 
-        <div class="card">
-          <strong>Redes</strong>
-          <p>Conceptos básicos (LAN, IP, servicios)</p>
-        </div>
+      /* Estilo de Proyectos */
+      .proyecto.card {
+        background: var(--bg-card);
+        padding: 30px;
+        border-radius: 12px;
+      }
 
-        <div class="card">
-          <strong>Herramientas</strong>
-          <p>Git, GitHub, VS Code</p>
-        </div>
-      </div>
-    </section>
-<section>
-  <h3>Mantenimiento de Equipos Informáticos</h3>
+      .proyecto h4 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
 
-  <p>
-    Experiencia en mantenimiento preventivo y correctivo de equipos informáticos,
-    garantizando la continuidad y el correcto funcionamiento
-    del hardware y software.
-  </p>
+      ul {
+        list-style: none;
+      }
 
-  <ul>
-    <li>Diagnóstico y resolución de fallas de hardware y software</li>
-    <li>Instalación y configuración de sistemas operativos Windows</li>
-    <li>Actualización de drivers y software</li>
-    <li>Limpieza física de equipos</li>
-    <li>Backup y recuperación básica de información</li>
-    <li>Configuración inicial de PCs y notebooks</li>
-    <li>Soporte técnico a usuarios finales</li>
-  </ul>
-</section>
-    <section>
-      <h3>Proyectos</h3>
+      ul li::before {
+        content: "→";
+        color: var(--accent);
+        margin-right: 10px;
+      }
 
-      <div class="proyecto card">
-        <h4>Sistema de Gestión para Taller de Chapa y Pintura</h4>
-        <p><strong>Proyecto principal</strong></p>
+      footer {
+        padding: 40px 0;
+        font-size: 0.8rem;
+        color: var(--text-dim);
+      }
 
-        <p>
-          Sistema web desarrollado para digitalizar y optimizar la gestión administrativa
-          y operativa de un taller de chapa y pintura.
-        </p>
+      /* Responsive para Móviles */
+      @media (max-width: 900px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+        header {
+          height: auto;
+          position: relative;
+          padding: 40px 20px;
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+        main {
+          padding: 40px 20px;
+        }
+      }
+    </style>
+  </head>
 
-        <strong>Funcionalidades:</strong>
-        <ul>
-          <li>Gestión de clientes y vehículos</li>
-          <li>Órdenes de trabajo con generación de PDF</li>
-          <li>Presupuestos en PDF</li>
-          <li>Control de estados y costos</li>
-          <li>Sistema de turnos</li>
-          <li>Persistencia de datos relacional</li>
-        </ul>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Diego Yamil Leonel Romero</h1>
+        <h2>Analista de Sistemas | Soporte IT | Backend PHP</h2>
 
-        <strong>Tecnologías:</strong>
-        <ul>
-          <li>PHP 8</li>
-          <li>MySQL</li>
-          <li>Arquitectura MVC</li>
-          <li>Generación de PDFs</li>
-        </ul>
-
-        <p>
-          🔗 Repositorio:
-          <a href="https://github.com/yamil032-afk/taller-app" target="_blank">
-            GitHub – taller-app
+        <div class="contacto">
+          Santa Fe, Argentina<br />
+          profyamilromero@gmail.com<br />
+          <a
+            href="https://www.linkedin.com/in/diego-yamil-leonel-romero"
+            target="_blank"
+          >
+            LinkedIn
           </a>
-        </p>
-      </div>
-    </section>
+        </div>
+      </header>
+      <main>
+        <section>
+          <h3>Perfil</h3>
+          <p>
+            Analista de Sistemas con experiencia en soporte IT, mantenimiento de
+            sistemas, desarrollo backend en PHP y diseño de bases de datos
+            relacionales.
+          </p>
+          <p>
+            Orientado a la <strong>resolución de problemas</strong>, análisis de
+            procesos y desarrollo de soluciones técnicas aplicadas a negocios.
+          </p>
+          <p>Interés en roles técnicos vinculados a:</p>
+          <ul>
+            <li>Soporte IT / Infraestructura</li>
+            <li>Desarrollo Backend PHP</li>
+            <li>Bases de Datos</li>
+            <li>Análisis y mejora de sistemas</li>
+          </ul>
+        </section>
 
-    <section>
-      <h3>Enfoque Profesional</h3>
-      <ul>
-        <li>Resolución de problemas técnicos</li>
-        <li>Pensamiento analítico y estructurado</li>
-        <li>Comprensión de procesos de negocio</li>
-        <li>Documentación y orden del código</li>
-      </ul>
-    </section>
+        <section>
+          <h3>Tecnologías y Conocimientos</h3>
 
-    <footer>
-      Portfolio IT – Diego Yamil Leonel Romero
-    </footer>
+          <div class="tecnologias-grid">
+            <div class="card">
+              <strong>Lenguajes</strong>
+              <p>PHP, SQL</p>
+            </div>
 
-  </div>
-</body>
+            <div class="card">
+              <strong>Frameworks</strong>
+              <p>Laravel</p>
+            </div>
+
+            <div class="card">
+              <strong>Backend</strong>
+              <p>PHP 8, Arquitectura MVC, APIs REST</p>
+            </div>
+
+            <div class="card">
+              <strong>Bases de Datos</strong>
+              <p>MySQL / MariaDB</p>
+            </div>
+
+            <div class="card">
+              <strong>DevOps</strong>
+              <p>Docker, Docker Compose</p>
+            </div>
+
+            <div class="card">
+              <strong>Sistemas Operativos</strong>
+              <p>Windows</p>
+            </div>
+
+            <div class="card">
+              <strong>Redes</strong>
+              <p>Conceptos básicos (LAN, IP, servicios)</p>
+            </div>
+
+            <div class="card">
+              <strong>Herramientas</strong>
+              <p>Git, GitHub, VS Code</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>Mantenimiento de Equipos Informáticos</h3>
+
+          <p>
+            Experiencia en mantenimiento preventivo y correctivo de equipos
+            informáticos, garantizando la continuidad y el correcto
+            funcionamiento del hardware y software.
+          </p>
+
+          <ul>
+            <li>Diagnóstico y resolución de fallas de hardware y software</li>
+            <li>Instalación y configuración de sistemas operativos Windows</li>
+            <li>Actualización de drivers y software</li>
+            <li>Limpieza física de equipos</li>
+            <li>Backup y recuperación básica de información</li>
+            <li>Configuración inicial de PCs y notebooks</li>
+            <li>Soporte técnico a usuarios finales</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Proyectos</h3>
+
+          <div class="proyecto card">
+            <h4>Sistema de Gestión para Taller de Chapa y Pintura</h4>
+            <p><strong>Proyecto principal</strong></p>
+
+            <p>
+              Sistema web desarrollado para digitalizar y optimizar la gestión
+              administrativa y operativa de un taller de chapa y pintura.
+            </p>
+
+            <strong>Funcionalidades:</strong>
+            <ul>
+              <li>Gestión de clientes y vehículos</li>
+              <li>Órdenes de trabajo con generación de PDF</li>
+              <li>Presupuestos en PDF</li>
+              <li>Control de estados y costos</li>
+              <li>Sistema de turnos</li>
+              <li>Persistencia de datos relacional</li>
+            </ul>
+
+            <strong>Tecnologías:</strong>
+            <ul>
+              <li>PHP 8</li>
+              <li>MySQL</li>
+              <li>Arquitectura MVC</li>
+              <li>Generación de PDFs</li>
+            </ul>
+
+            <p>
+              🔗 Repositorio:
+              <a
+                href="https://github.com/yamil032-afk/taller-app"
+                target="_blank"
+              >
+                GitHub – taller-app
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h3>Enfoque Profesional</h3>
+          <ul>
+            <li>Resolución de problemas técnicos</li>
+            <li>Pensamiento analítico y estructurado</li>
+            <li>Comprensión de procesos de negocio</li>
+            <li>Documentación y orden del código</li>
+          </ul>
+        </section>
+      </main>
+      <footer>Portfolio IT – Diego Yamil Leonel Romero</footer>
+    </div>
+  </body>
 </html>
