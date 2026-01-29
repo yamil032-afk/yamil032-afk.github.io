@@ -16,6 +16,57 @@
         --text-dim: #8b949e;
         --border: #30363d;
       }
+      /* Repositorio GitHub */
+      .repo-box {
+        margin-top: 25px;
+      }
+      p {
+        font-size: 19px;
+        padding-bottom: 15px;
+      }
+      .repo-label {
+        display: block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--text-dim);
+        margin-bottom: 8px;
+      }
+
+      .repo-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+        background: #0d1117;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        color: var(--text-main);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .repo-link:hover {
+        border-color: var(--accent);
+        background: #161b22;
+        transform: translateY(-2px);
+      }
+
+      .repo-icon {
+        font-size: 1.2rem;
+      }
+
+      .repo-name {
+        font-weight: 600;
+      }
+
+      .repo-platform {
+        font-size: 0.75rem;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
 
       * {
         box-sizing: border-box;
@@ -36,7 +87,9 @@
         grid-template-columns: 320px 1fr; /* Columna fija para perfil */
         min-height: 100vh;
       }
-
+      #descpro {
+        font-size: 20px;
+      }
       /* Barra Lateral (Header) */
       header {
         background-color: var(--bg-card);
@@ -76,6 +129,7 @@
         text-decoration: none;
         display: block;
         margin-top: 10px;
+        font-size: 22px;
       }
 
       /* Área de Contenido (Main) */
@@ -132,12 +186,10 @@
       }
 
       /* Estilo de Proyectos */
-      .proyecto.card {
-        background: var(--bg-card);
-        padding: 30px;
-        border-radius: 12px;
-      }
 
+      .proyecto.card {
+        font-size: 19px;
+      }
       .proyecto h4 {
         font-size: 1.4rem;
         margin-bottom: 10px;
@@ -148,7 +200,7 @@
       }
 
       ul li::before {
-        content: "→";
+        content: "*";
         color: var(--accent);
         margin-right: 10px;
       }
@@ -157,6 +209,28 @@
         padding: 40px 0;
         font-size: 0.8rem;
         color: var(--text-dim);
+      }
+
+      /* Hover en Tecnologías */
+      .tecnologias-grid .card {
+        transition: all 0.25s ease;
+        cursor: default;
+      }
+
+      .tecnologias-grid .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+        box-shadow: 0 8px 25px rgba(88, 166, 255, 0.15);
+      }
+
+      /* Efecto extra en el título */
+      .tecnologias-grid .card:hover strong {
+        color: #ffffff;
+      }
+
+      /* Texto un poco más visible al hover */
+      .tecnologias-grid .card:hover p {
+        color: #c9d1d9;
       }
 
       /* Responsive para Móviles */
@@ -287,7 +361,7 @@
             <h4>Sistema de Gestión para Taller de Chapa y Pintura</h4>
             <p><strong>Proyecto principal</strong></p>
 
-            <p>
+            <p id="descpro">
               Sistema web desarrollado para digitalizar y optimizar la gestión
               administrativa y operativa de un taller de chapa y pintura.
             </p>
@@ -311,12 +385,16 @@
             </ul>
 
             <p>
-              🔗 Repositorio:
+              <span class="repo-label">Repositorio</span>
+
               <a
                 href="https://github.com/yamil032-afk/taller-app"
                 target="_blank"
+                class="repo-link"
               >
-                GitHub – taller-app
+                <span class="repo-icon"></span>
+                <span class="repo-name">Taller-app</span>
+                <span class="repo-platform">GitHub</span>
               </a>
             </p>
           </div>
