@@ -2,23 +2,236 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Diego Yamil Romero | Portfolio IT</title>
+  <title>Diego Yamil Leonel Romero | Portfolio IT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      color: #2c2c2c;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      background: #ffffff;
+    }
+
+    header {
+      border-bottom: 2px solid #e0e0e0;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    h2 {
+      margin: 5px 0 10px;
+      font-size: 18px;
+      font-weight: normal;
+      color: #555;
+    }
+
+    .contacto {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .contacto a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section h3 {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .tecnologias-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    .proyecto h4 {
+      margin-top: 0;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Diego Yamil Romero</h1>
-  <h2>Analista de Sistemas | Soporte IT | Backend PHP</h2>
-  <p>
-    Analista de Sistemas con experiencia en soporte IT,
-    desarrollo backend en PHP y bases de datos.
-  </p>
-  <p>
-    Tecnologías: PHP 8.x | Laravel | MySQL | Docker | Linux
-  </p>
-  <p>
-    🔗 GitHub:
-    <a href="https://github.com/yamil032-afk/romerodyamil">
-      Portfolio
-    </a>
-  </p>
+  <div class="container">
+
+    <header>
+      <h1>Diego Yamil Leonel Romero</h1>
+      <h2>Analista de Sistemas | Soporte IT | Backend PHP</h2>
+
+      <div class="contacto">
+        📍 Santa Fe, Argentina<br>
+        📧 profyamilromero@gmail.com<br>
+        🔗 <a href="https://www.linkedin.com/in/diego-yamil-leonel-romero" target="_blank">
+          LinkedIn
+        </a>
+      </div>
+    </header>
+
+    <section>
+      <h3>Perfil</h3>
+      <p>
+        Analista de Sistemas con experiencia en soporte IT, mantenimiento de sistemas,
+        desarrollo backend en PHP y diseño de bases de datos relacionales.
+      </p>
+      <p>
+        Orientado a la <strong>resolución de problemas</strong>, análisis de procesos
+        y desarrollo de soluciones técnicas aplicadas a negocios.
+      </p>
+      <p>
+        Interés en roles técnicos vinculados a:
+      </p>
+      <ul>
+        <li>Soporte IT / Infraestructura</li>
+        <li>Desarrollo Backend PHP</li>
+        <li>Bases de Datos</li>
+        <li>Análisis y mejora de sistemas</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Tecnologías y Conocimientos</h3>
+
+      <div class="tecnologias-grid">
+        <div class="card">
+          <strong>Lenguajes</strong>
+          <p>PHP, SQL</p>
+        </div>
+
+        <div class="card">
+          <strong>Frameworks</strong>
+          <p>Laravel</p>
+        </div>
+
+        <div class="card">
+          <strong>Backend</strong>
+          <p>PHP 8, Arquitectura MVC, APIs REST</p>
+        </div>
+
+        <div class="card">
+          <strong>Bases de Datos</strong>
+          <p>MySQL / MariaDB</p>
+        </div>
+
+        <div class="card">
+          <strong>DevOps</strong>
+          <p>Docker, Docker Compose</p>
+        </div>
+
+        <div class="card">
+          <strong>Sistemas Operativos</strong>
+          <p>Windows</p>
+        </div>
+
+        <div class="card">
+          <strong>Redes</strong>
+          <p>Conceptos básicos (LAN, IP, servicios)</p>
+        </div>
+
+        <div class="card">
+          <strong>Herramientas</strong>
+          <p>Git, GitHub, VS Code</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Proyectos</h3>
+
+      <div class="proyecto card">
+        <h4>Sistema de Gestión para Taller de Chapa y Pintura</h4>
+        <p><strong>Proyecto principal</strong></p>
+
+        <p>
+          Sistema web desarrollado para digitalizar y optimizar la gestión administrativa
+          y operativa de un taller mecánico.
+        </p>
+
+        <strong>Funcionalidades:</strong>
+        <ul>
+          <li>Gestión de clientes y vehículos</li>
+          <li>Órdenes de trabajo con generación de PDF</li>
+          <li>Presupuestos en PDF</li>
+          <li>Control de estados y costos</li>
+          <li>Sistema de turnos</li>
+          <li>Persistencia de datos relacional</li>
+        </ul>
+
+        <strong>Tecnologías:</strong>
+        <ul>
+          <li>PHP 8</li>
+          <li>MySQL</li>
+          <li>Arquitectura MVC</li>
+          <li>Generación de PDFs</li>
+        </ul>
+
+        <p>
+          🔗 Repositorio:
+          <a href="https://github.com/yamil032-afk/taller-app" target="_blank">
+            GitHub – taller-app
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h3>Enfoque Profesional</h3>
+      <ul>
+        <li>Resolución de problemas técnicos</li>
+        <li>Pensamiento analítico y estructurado</li>
+        <li>Comprensión de procesos de negocio</li>
+        <li>Documentación y orden del código</li>
+      </ul>
+    </section>
+
+    <footer>
+      Portfolio IT – Diego Yamil Leonel Romero
+    </footer>
+
+  </div>
 </body>
 </html>
